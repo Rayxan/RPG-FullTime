@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 import entities.Mission;
+import entities.Item;
 
 public class Player {
 	private String name;
@@ -11,6 +12,8 @@ public class Player {
 	private Double gold;
 	
 	private List<Mission> missions = new ArrayList<>();
+	
+	private List<Item> items = new ArrayList<>();
 	
 	public Player() {
 		
@@ -57,4 +60,18 @@ public class Player {
 	public void removeMission(Mission mission) {
 		missions.remove(mission);
 	}
+	
+	public List<Item> getItem() {
+		return items;
+	}
+	
+	public void additem(Item item) {
+		items.add(item);
+	}
+	
+	public void removeItem(Item item) {
+		items.remove(item);
+	}
+	
+	
 }
