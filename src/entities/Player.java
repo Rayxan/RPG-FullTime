@@ -1,9 +1,16 @@
 package entities;
 
+import java.util.List;
+import java.util.ArrayList;
+
+import entities.Mission;
+
 public class Player {
 	private String name;
 	private Integer playerLevel;
 	private Double gold;
+	
+	private List<Mission> missions = new ArrayList<>();
 	
 	public Player() {
 		
@@ -37,5 +44,17 @@ public class Player {
 
 	public void setGold(Double gold) {
 		this.gold = gold;
+	}
+	
+	public List<Mission> getMission() {
+		return missions;
+	}
+	
+	public void addMission(Mission mission) {
+		missions.add(mission);
+	}
+	
+	public void removeMission(Mission mission) {
+		missions.remove(mission);
 	}
 }
